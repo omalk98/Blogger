@@ -1,0 +1,18 @@
+<header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-gray-900">Blogger</h1>
+    </div>
+    <nav class="ml-10 flex items-baseline space-x-4">
+      <a
+        *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+        routerLinkActive="text-indigo-600 bg-gray-100"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="text-gray-600 hover:text-indigo-600 hover:bg-gray-200 font-semibold px-3 py-2 rounded-md text-sm transition duration-300"
+      >
+        {{ link.label }}
+      </a>
+    </nav>
+  </div>
+</header>

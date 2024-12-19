@@ -1,0 +1,14 @@
+<footer class="bg-gray-800 text-white py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <div class="text-sm">
+      &copy; {{ currentYear }} My Blog. All Rights Reserved.
+    </div>
+    <div class="flex space-x-4">
+      <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank"
+        class="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
+        <fa-icon [icon]="link.icon" class="text-xl" />
+        <span class="hidden md:inline">{{ link.label }}</span>
+      </a>
+    </div>
+  </div>
+</footer>
